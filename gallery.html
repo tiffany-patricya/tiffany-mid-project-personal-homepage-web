@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffany's Gallery</title>
+    <!-- Import font Montserrat langsung di HTML biar aman -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <div class="logo">
+            <h1>Tiffany's Gallery</h1>
+            <p class="archives-text">personal archives</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bungkus utama Gallery dengan background gradasi -->
+    <main class="gallery-wrapper">
+        
+        <!-- SECTION 1: Portraits -->
+        <section class="gallery-section" id="portraits-sec">
+            <h2 class="gallery-title">Portraits</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                
+                <div class="carousel-track">
+                    <img src="assets/fotopersonal1.jpeg" alt="Portrait 1">
+                    <img src="assets/fotopersonal2.jpeg" alt="Portrait 2">
+                    <img src="assets/foto3personal.jpeg" alt="Portrait 3">
+                    <img src="assets/fotopersonal4.jpeg" alt="Portrait 4">
+                    <img src="assets/foto5personal.jpeg" alt="Portrait 5">
+                </div>
+
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- GARIS PEMBATAS HITAM TIPIS -->
+        <div class="section-divider"></div>
+
+        <!-- SECTION 2: Personal Photographs -->
+        <section class="gallery-section" id="personal-sec">
+            <h2 class="gallery-title">Personal Photographs</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                
+                <div class="carousel-track">
+                    <img src="assets/ph1.jpeg" alt="Personal 1">
+                    <img src="assets/ph2.jpeg" alt="Personal 2">
+                    <img src="assets/ph3.jpeg" alt="Personal 3">
+                    <img src="assets/ph4.jpeg" alt="Personal 4">
+                    <img src="assets/ph5.jpeg" alt="Personal 5">
+                </div>
+
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

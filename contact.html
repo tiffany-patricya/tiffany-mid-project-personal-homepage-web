@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Tiffany</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <div class="logo">
+            <h1>Tiffany Laurellè</h1>
+            <p class="archives-text">get in touch!</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-wrapper">
+        <!-- Judul Raksasa -->
+        <h1 class="page-title fade-in">stay connected.</h1>
+
+        <div class="contact-grid fade-in">
+            <!-- Kolom Kiri (Info) -->
+            <div class="contact-info">
+                <div class="info-block">
+                    <h4>Location</h4>
+                    <p>Manado, North Sulawesi</p>
+                </div>
+                <div class="info-block">
+                    <h4>Availability</h4>
+                    <p>Monday - Friday<br>09:00 AM - 05:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan (Form) -->
+            <div class="contact-form">
+                <form class="minimal-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email (required)</label>
+                        <input type="email" required>
+                    </div>
+
+                    <!-- BAGIAN MESSAGE YANG DITAMBAHKAN -->
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="3" required></textarea>
+                    </div>
+
+
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Kolom Bawah (Kontak Utama) -->
+        <div class="contact-bottom fade-in">
+            <a href="mailto:tiffanypatricyaa@gmail.com" class="huge-link">tiffanypatricyaa@gmail.com</a>
+            <a href="https://instagram.com/tiffanypatricyaa" target="_blank" class="huge-link">@tiffanypatricyaa</a>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

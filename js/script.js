@@ -117,3 +117,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// --- 5. AJAX FETCH DATA DIRI (Untuk Contact Page) ---
+const aboutContainer = document.getElementById('about-data');
+
+if (aboutContainer) {
+    // Memulai Fetch (AJAX)
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Memasukkan data ke dalam HTML secara dinamis
+            aboutContainer.innerHTML = `
+                <div class="data-item">
+                    <span class="data-label">Name</span>
+                    <span class="data-value">${data.name}</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Major</span>
+                    <span class="data-value">${data.major}</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Interests</span>
+                    <span class="data-value">${data.interest}</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Bio</span>
+                    <span class="data-value">${data.bio}</span>
+                </div>
+                <p class="about-quote">${data.quote}</p>
+            `;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            aboutContainer.innerHTML = '<p>Failed to load profile.</p>';
+        });
+}

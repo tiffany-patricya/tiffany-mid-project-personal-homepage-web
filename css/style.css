@@ -583,28 +583,24 @@ main {
 
 .contact-wrapper {
     padding: 150px 5% 80px;
-    background-color: var(--honey-oatmilk); /* Latar Terang */
-    color: var(--savory-sage); /* Teks Gelap */
+    background-color: var(--savory-sage); /* Dikembalikan ke hijau elegan */
+    color: var(--coconut-cream); /* Teks jadi warna terang */
     min-height: 100vh;
 }
 
-/* Mengubah warna khusus di halaman kontak agar tulisan navbar juga gelap */
-.contact-wrapper ~ .header, .contact-wrapper ~ .header .logo h1, .contact-wrapper ~ .header .navbar a {
-    color: var(--savory-sage);
-}
-
 .contact-wrapper .page-title {
-    color: var(--savory-sage); /* Judul raksasa warna gelap */
-    border-bottom: 1px solid rgba(129, 130, 99, 0.3); /* Garis batas bawah hijau diredam */
+    color: var(--coconut-cream); 
+    border-bottom: 1px solid rgba(255, 250, 242, 0.2); 
 }
 
-/* Layout 2 Kolom (Kiri Info, Kanan Form) */
+/* Layout 3 Kolom */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Kolom kanan lebih lebar */
-    gap: 80px;
+    grid-template-columns: 1fr 1fr 1.5fr; 
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto 100px;
+    align-items: start;
 }
 
 .info-block {
@@ -623,6 +619,62 @@ main {
 .info-block p {
     font-size: 16px;
     opacity: 0.8;
+}
+
+/* --- ABOUT SECTION --- */
+.contact-about {
+    border-left: 1px solid rgba(255, 250, 242, 0.2); /* Garis batas terang */
+    padding-left: 40px;
+}
+
+.about-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FOTO FULL COLOR (EFEK ABU-ABU DIHAPUS) */
+.about-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.data-item {
+    margin-bottom: 15px;
+}
+
+.data-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--peach-protein); /* Warna aksen pink peach */
+}
+
+.data-value {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4;
+}
+
+.about-quote {
+    font-style: italic;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 250, 242, 0.2);
+    padding-top: 15px;
+    opacity: 0.9;
 }
 
 /* --- FORM MINIMALIS --- */
@@ -650,29 +702,26 @@ main {
     margin-bottom: 10px;
 }
 
-/* Style Garis Bawah (Tanpa Box) */
+/* Style Form menyesuaikan background gelap */
 .minimal-form input[type="text"],
 .minimal-form input[type="email"],
-.minimal-form select,
 .minimal-form textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--savory-sage);
+    border-bottom: 1px solid var(--coconut-cream);
     padding: 10px 0;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
-    color: var(--savory-sage);
+    color: var(--coconut-cream);
     outline: none;
     transition: border-color 0.3s;
 }
 
 .minimal-form input:focus,
-.minimal-form select:focus,
 .minimal-form textarea:focus {
-    border-bottom: 2px solid var(--savory-sage); /* Garis menebal saat diklik */
+    border-bottom: 2px solid var(--peach-protein); 
 }
 
-/* Checkbox Style */
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -681,22 +730,22 @@ main {
     font-size: 14px;
 }
 
-/* Tombol Submit */
 .submit-btn {
     align-self: flex-start;
     padding: 15px 40px;
-    background-color: var(--savory-sage);
-    color: var(--coconut-cream);
+    background-color: var(--coconut-cream);
+    color: var(--savory-sage);
     border: none;
     border-radius: 50px;
     font-size: 16px;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: var(--blush-beet);
+    background-color: var(--peach-protein);
     color: var(--coconut-cream);
 }
 
@@ -706,20 +755,20 @@ main {
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
-    border-top: 1px solid rgba(129, 130, 99, 0.3);
+    border-top: 1px solid rgba(255, 250, 242, 0.2);
 }
 
 .huge-link {
-    font-size: 2vw; /* Ukuran sudah dikecilkan agar lebih manis */
-    font-family: 'Lato', sans-serif; /* Font disamakan */
+    font-size: 2vw; 
+    font-family: 'Lato', sans-serif; 
     font-weight: 700;
-    color: var(--savory-sage);
+    color: var(--coconut-cream);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .huge-link:hover {
-    color: var(--blush-beet);
+    color: var(--peach-protein);
 }
 
 /* Responsive Mobile */
@@ -732,6 +781,13 @@ main {
     .form-row {
         grid-template-columns: 1fr;
     }
+
+    .contact-about {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 250, 242, 0.2);
+        padding-top: 30px;
+    }
     
     .contact-bottom {
         flex-direction: column;
@@ -740,6 +796,6 @@ main {
     }
     
     .huge-link {
-        font-size: 4.5vw; /* Disesuaikan untuk layar HP agar tidak kekecilan */
+        font-size: 4.5vw; 
     }
 }
